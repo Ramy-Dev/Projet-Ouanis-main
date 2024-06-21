@@ -29,6 +29,7 @@ DEFAULT_FROM_EMAIL = 'imansoura.ramy@outlook.com'
 
 INSTALLED_APPS = [
     'jazzmin',
+    a
     'admin_interface',
     'colorfield',
     'ouanis',
