@@ -1,0 +1,122 @@
+/* Responsive styles for the login page
+
+/* Mobile styles */
+@media (max-width: 450px){
+    .sign_up_user {
+        width: 90% !important;
+        padding: 15px !important;
+      }
+}
+@media (max-width: 600px) {
+    .bd {
+      padding: 20px;
+    }
+  
+    header {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px !important;
+      padding-top: 20px !important;
+    }
+  
+    .right-side-sign-up {
+      display: none;
+    }
+  
+    .sign_up_user {
+      width: 100% !important;
+      padding: 15px !important;
+    }
+  
+    .titre-form {
+      font-size: 1.5rem !important;
+    }
+  
+    .soustitre-form {
+      font-size: 0.8rem !important;
+    }
+  
+    .illustration-plane {
+      display: none;
+    }
+  
+    .links-container {
+      flex-direction: column;
+      align-items: flex-start !important;
+      gap: 10px !important;
+    }
+  }
+  
+  /* Tablet styles */
+  @media (min-width: 601px) and (max-width: 900px) {
+    .bd {
+      padding: 20px;
+    }
+  
+    header {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px !important;
+      padding-top: 20px !important;
+    }
+  
+    .right-side-sign-up {
+      display: none;
+    }
+  
+    .sign_up_user {
+      width: 100% !important;
+      max-width: 600px;
+      padding: 20px !important;
+    }
+  
+    .titre-form {
+      font-size: 1.7rem !important;
+    }
+  
+    .soustitre-form {
+      font-size: 0.9rem !important;
+    }
+  
+    .illustration-plane {
+      display: none;
+    }
+  
+    .links-container {
+      flex-direction: column;
+      align-items: flex-start !important;
+      gap: 10px !important;
+    }
+  }
+  
+  /* Desktop styles */
+  @media (min-width: 901px) and (max-width: 1200px) {
+    header {
+      gap: 150px !important;
+    }
+  
+    .right-side-sign-up {
+      display: none;
+    }
+  
+    .sign_up_user {
+      width: 100% !important;
+      max-width: 800px;
+      padding: 20px !important;
+    }
+  
+    .titre-form {
+      font-size: 1.8rem !important;
+    }
+  
+    .soustitre-form {
+      font-size: 0.9rem !important;
+    }
+  
+    .links-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px !important;
+    }
+  } 

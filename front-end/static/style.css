@@ -1,0 +1,489 @@
+/* ----------------------------------------------------------- */
+/* The @import */
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* ----------------------------------------------------------- */
+/* Root Styling */
+
+* {
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --couleur-principale: #21A5C3;
+  --couleur-secondaire: #0D434F;
+  --couleur-light: #4FE1F9;
+  --couleur-selected: #BFACFE;
+  --couleur-text:#1C1D20 ;
+}
+
+::-webkit-file-upload-button {
+  display: none;
+}
+::selection {
+  color: white;
+  background: var(--couleur-principale); /* Your color here */
+}
+/* ----------------------------------------------------------- */
+/* Global Styling */
+
+.w-50 {
+  width: 50% !important;
+}
+.w-100 {
+  width: 100% !important;
+}
+.h-50 {
+  height: 50% !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+.index {
+  z-index: 9;
+}
+input[type="date"]::placeholder,
+input[type="time"]::placeholder {
+  text-align: center;
+  align-items: center;
+}
+
+/* ----------------------------------------------------------- */
+/* Color and fonts Styling */
+
+.highlight {
+  padding: 0 4px 8px 4px;
+  border-radius: 15px;
+  box-shadow: #1A849C 0px 8px;
+
+}
+.reverseHighlight {
+  padding: 0 4px 8px 4px;
+  border-radius: 15px;
+  box-shadow: #4FE1F9 0px 8px;
+}
+.card-shadow {
+  border-radius: 20px;
+  box-shadow: #a186ff -5px 5px, #d0c2ff -10px 10px, #e6e0f9 -15px 15px,
+    rgba(0, 0, 0, 0.1) -10px 10px, rgba(0, 0, 0, 0.05) -0 0;
+
+}
+
+.card-shadow-gray {
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.29);
+  /* box-shadow: 0 1px 3px 0 #25201f4d; */
+}
+.bg-primary {
+  background-color: var(--couleur-principale) !important;
+}
+.text-primary {
+  color: var(--couleur-principale) !important;
+}
+.text-basic {
+  color: var(--couleur-text) !important;
+
+}
+.text-light {
+  color: var(--couleur-light) !important;
+}
+.bg-light {
+  background-color: var(--couleur-light) !important;
+}
+.bg-secondary {
+  background-color: var(--couleur-secondaire) !important;
+}
+.text-darkPrimary {
+  color: var(--couleur-secondaire) !important;
+}
+.text-secondary {
+  color: #999C9E !important;
+}
+.text-midSecondary {
+  color: #909090 !important;
+}
+.text-darkSecondary {
+  color: #5E5E5E !important;
+}
+.bg-third {
+  background-color: #D8D9DB !important;
+}
+.bg-gold {
+  background-color: var(--couleur-gold) !important;
+}
+.bg-basic {
+  background-color: var(--couleur-text) !important;
+}
+.text-gold {
+  color: var(--couleur-gold) !important;
+}
+.fontSecondary {
+  font-family: "Outfit", sans-serif !important;
+}
+.fontPrimary {
+font-family: "Poppins", sans-serif;
+}
+/* ----------------------------------------------------------- */
+/* Usefull Objects */
+
+.card-img-top {
+  width: 75px;
+  height: 75px;
+}
+
+/* ----------------------------------------------------------- */
+/* Cover Image */
+
+.cover {
+  -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  background-color: rgb(255, 255, 255);
+}
+/* .cover-recherche {
+  -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  background-color: var(--couleur-principale);
+} */
+
+.cover-img {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+}
+/* ----------------------------------------------------------- */
+/* Cards */
+
+.nomDateTopCard .DateTopCard {
+  font-size: small;
+  display: flex;
+  justify-content: center;
+}
+.destinationTopCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dateCard{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.colorTopAnnonce {
+  width: 100%;
+  height: 40px;
+  border-radius: 30px;
+}
+.cardAnnonce {
+  box-shadow: 0 1px 3px 0 #25201f4d;
+  transition: 0.2s ease;
+  text-decoration: none;
+}
+.cardAnnonce:hover {
+  box-shadow: 2px 2px 3px 2px #25201f4d;
+}
+.tarifDetailsCard button {
+text-decoration: none;
+appearance: none;
+border: none;
+text-align: start;
+}
+
+/* ----------------------------------------------------------- */
+/* Nav */
+
+nav {
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.412);
+  z-index: 99;
+}
+.Profil-img-top-nav-bar {
+  height: 32px;
+
+}
+/* ----------------------------------------------------------- */
+/* Header */
+
+header {
+  margin-top: 0;
+  position: relative;
+  height: 94vh;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.containerHeader {
+  position: absolute; /* Changement en position absolue */
+  top: 48%; /* Déplace le containerHome à 50% du haut du header */
+  transform: translateY(-50%); /* Centre le containerHome verticalement */
+  left: 0; /* Aligne le containerHome à gauche */
+  right: 0; /* Aligne le containerHome à droite */
+  /* background-color: black; */
+  min-height: 55vh;
+  width: 100%; /* Ajuste la largeur au container parent */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  place-content: center;
+}
+
+/* ----------------------------------------------------------- */
+/* Footer */
+
+.footer {
+  /* Old Style */
+
+  /* display: flex;
+   background: #333;
+   justify-content: flex-end;
+   align-items: flex-end;
+   min-height: 100vh; */
+
+  position: relative;
+  width: 100%;
+  background: var(--couleur-secondaire);
+  min-height: 100px;
+  padding: 20px 50px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+/* ----------------------------------------------------------- */
+/* Page Home */
+
+.hidden {
+  display: none;
+  transition: transform 1s;
+}
+.singup {
+  margin-top: 100px !important;
+  width: 50%;
+}
+.login {
+  margin-top: 200px !important;
+  width: 50%;
+}
+.bd {
+  height: 100vh;
+}
+
+/* ----------------------------------------------------------- */
+/* Page Sign-up Log-in */
+
+.snl {
+  border: none;
+  border-radius: 20px;
+}
+
+/* ----------------------------------------------------------- */
+/* Page Recherche */
+
+ /* code mao albanie */
+
+ .input-box {
+  display: flex;
+  width: 100%;
+  gap: 90px;
+  align-items: center;
+}
+
+.input-box input {
+  width: 100%;
+}
+
+.input-box input::placeholder {
+  text-align: center;
+}
+/* -------------------------- */
+
+/* ----------------------------------------------------------- */
+
+/* Page Details */
+
+.annc {
+  margin-top: 75px !important;
+}
+.details {
+  width: 50%;
+}
+/* .colorOriginalSwitch {
+  background-color: var(--couleur-selected);
+  color: var(--couleur-secondaire);
+  border: 4px solid var(--couleur-principale);
+  box-shadow: none !important;
+  transition-property: none !important;
+  list-style:;
+}
+.colorOriginalSwitch .categorieTarifCard {
+  color: var(--couleur-gold);
+} */
+.colorOriginalSwitch {
+  color: #5A02D4;
+  border: 4px solid #5A02D4;
+  box-shadow: none !important;
+  transition-property: none !important;
+}
+.colorSecondarySwitch {
+  
+  background-color: var(--couleur-principale);
+  color: white;
+  box-shadow: 3px -3px 3px 2px #25201f4d;
+  border: 4px solid var(--couleur-principale);
+}
+.colorSecondarySwitch .categorieTarifCard {
+  color: var(--couleur-gold);
+}
+
+/* ----------------------------------------------------------- */
+/* Page Profile */
+
+.Profile {
+  padding: 30px 0 0 0;
+  margin: 0 0 2300px 0;
+  
+}
+
+.Profile-background {
+  border-radius: 40px;
+  width: 90%;
+  height: 400px;
+  display: block;
+  justify-content: center;
+  margin: auto;
+}
+
+.ProfileTopCard {
+  padding: 40px 50px 80px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.choiceProfile {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin-bottom: 50px;
+}
+.choiceProfile button {
+  background: none;
+}
+.choiceProfileBtn {
+  padding: 10px 20px;
+  appearance: none;
+  border-radius: 20px;
+
+}
+
+.colorProfileOriginalSwitch {
+  color: white;
+  background-color: var(--couleur-secondaire);
+
+}
+
+.colorProfileSecondarySwitch {
+  color: var(--couleur-principale);
+  background-color: white;
+  transition: color 0.2s ease;
+}
+.colorProfileSecondarySwitch:hover {
+  color: var(--couleur-light);
+}
+
+/* ----------------------------------------------------------- */
+/* Page Creation */
+
+
+.tagBadge {
+  font-family: "Outfit", sans-serif !important;
+  font-size: 1.2rem;
+  background-color: var(--couleur-principale);
+  color: white;
+  padding: 1.5rem 4rem;
+  border-radius: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.colorTransportOriginalSwitch {
+  color: white;
+  background-color: var(--couleur-secondaire);
+}
+
+.colorTransportSecondarySwitch {
+  color: white;
+  background-color: var(--couleur-principale);
+}
+
+.choiceTransportBtn {
+  padding: 10px 20px;
+  appearance: none;
+  border-radius: 20px;
+}
+/* ----------------------------------------------------------- */

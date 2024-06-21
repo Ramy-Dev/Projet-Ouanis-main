@@ -1,0 +1,94 @@
+@media (max-width: 1300px) {
+
+  .gridBrandImage {
+    display: none;
+  
+  }
+  .logo_envoyage {
+    display: none;
+  }
+  
+}
+
+@media (max-width: 1024px) {
+    .headerContent {
+      grid-template-columns: 1fr;
+      text-align: center;
+      margin-left: 0;
+    }
+  
+    .brandName {
+      font-size: 5rem;
+    }
+  
+    .brandSlogan {
+      font-size: 1.5rem;
+    }
+  
+    .logo {
+      position: relative;
+      left: 0;
+      top: 0;
+      transform: translate(0, 0);
+      margin: 20px auto;
+    }
+  
+    .logo_envoyage {
+      width: 70%;
+    }
+  }
+  @media (max-width: 768px) {
+    .brandName {
+      font-size: 4rem;
+    }
+  
+    .brandSlogan {
+      font-size: 1.25rem;
+    }
+  
+    .logo_envoyage {
+      width: 80%;
+    }
+  }
+  @media (max-width: 480px) {
+    .headerContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .brandName {
+      font-size: 3rem;
+    }
+  
+    .brandSlogan {
+      font-size: 1rem;
+    }
+  
+    .logo_envoyage {
+      width: 90%;
+    }
+  
+    .bgImage {
+      left: 0;
+    }
+  }
+
+  @media (max-width: 1850px) {
+    .logo {
+      top: 50%!important;
+      left: 60%!important;
+    }
+    .logo_envoyage {
+      width: 70%!important;
+    }
+  }  
+  @media (min-width: 1301px) and (max-width: 1550px){
+    .logo {
+      top: 50%!important;
+      left: 58%!important;
+    }
+    .logo_envoyage {
+      width: 60%!important;
+    }
+  }  

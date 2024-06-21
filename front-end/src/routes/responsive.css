@@ -1,0 +1,487 @@
+
+
+@media only screen and (min-width: 451px) and (max-width: 600px) {
+
+  
+    .aboutSectionType1, .aboutSectionType2 {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .stepTop {
+      flex-direction: column;
+    }
+  
+    .stepText {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .containerAnnonces {
+      margin-left: 0;
+      padding: 0 20px;
+    }
+  
+    .faqText {
+      font-size: 2rem;
+    }
+  
+    /* .bgImage {
+      left: -5%;
+      width: 100%;
+      height: auto;
+    } */
+
+    .brandImage {
+      height: 60vh;
+
+    }
+  
+    .aboutSectionHexagonLeft,
+    .aboutSectionHexagonRight {
+      transform: scale(0.5);
+    }
+  
+    .arrow {
+      width: 80px;
+    }
+  
+    .arrowSVG {
+      width: 80px;
+    }
+  
+    .stepImage {
+      width: 150px;
+    }
+  
+    .carousel{
+      padding: 0px 100px;
+      gap: 200px !important;
+    }
+    .stepsPart1 .card{
+      min-width: 150px !important; /* Ajuster la largeur de vos cartes */
+    }
+
+ 
+  }
+  @media only screen and (max-width: 600px) {
+    .arrowAboutSteps{
+      top: -3% !important; 
+    }
+    .step01 {
+     padding: 150px 0px 0px 0px!important;
+    }
+    .steps {
+      gap: 100px!important;
+    }
+    .step02Top {
+      width: 100%!important;
+    }
+    .stepContent {
+      align-items: center;
+    }
+    .stepContent .stepText{
+      align-self: flex-end;
+    }
+    .step03 .stepText,
+    .step04 .stepText {
+      width: 80%!important;
+    }
+    .stepTitle {
+      font-size: 1.5rem!important;
+    
+    }
+    .arrowSVG {
+      width: 125px!important;
+    } 
+    .stepButton {
+      font-size: 1rem!important;
+      padding: 15px 50px!important;
+    }
+    .stepText{
+      font-size: 1.1rem!important;
+    }
+  }
+  /* Responsive Styles for Mobile Devices */
+@media only screen and (max-width: 450px) {
+
+  .stepTitle {
+    font-size: 1.2rem!important;
+  
+  }
+}
+  /* Responsive Styles for Tablets */
+  @media only screen and (min-width: 601px) and (max-width: 900px) {
+  
+    .aboutSectionType1, .aboutSectionType2 {
+      width: 90%;
+      margin-left: 0;
+    }
+  
+    .stepTop {
+      flex-direction: column;
+    }
+  
+    .stepText {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    /* .containerAnnonces {
+      margin-left: 0;
+      padding: 0 30px;
+    } */
+  
+    .faq {
+      padding: 70px 40px;
+    }
+  
+    .faqText {
+      font-size: 2.5rem;
+    }
+/*   
+    .bgImage {
+      left: -7%;
+      width: 105%;
+      height: auto;
+    }
+   */
+    
+    .brandImage {
+      height: 80vh;
+    }
+  
+    .aboutSectionHexagonLeft,
+    .aboutSectionHexagonRight {
+      transform: scale(0.7);
+    }
+  
+    .arrow {
+      width: 100px;
+    }
+  
+    .arrowSVG {
+      width: 100px;
+    }
+  
+    .stepImage {
+      width: 250px;
+    }
+  
+   .faq .card{
+      min-width: 400px !important; /* Ajuster la largeur de vos cartes */
+    }
+    .step02Top {
+      width: 100%!important;
+    }
+    .step03 {
+      margin-top : 5px!important;
+    }
+  }
+  
+  /* Responsive Styles for Desktops */
+  @media only screen and (min-width: 901px) {
+
+    .aboutSectionType1, .aboutSectionType2 {
+      width: 80%;
+    }
+  
+    .stepTop {
+      flex-direction: row;
+    }
+  
+    .stepText {
+      width: 75%;
+    }
+  
+    .containerAnnonces {
+      margin-left: 80px;
+    }
+  
+    .faq {
+      padding: 100px 200px;
+    }
+  
+    .faqText {
+      font-size: 3rem;
+    }
+  
+    /* .bgImage {
+      left: -10%;
+      width: 100%;
+      height: auto;
+    } */
+  
+    .brandImage {
+      height: 100vh;
+    }
+  
+    .aboutSectionHexagonLeft,
+    .aboutSectionHexagonRight {
+      transform: scale(1);
+    }
+  
+    .arrow {
+      width: 150px;
+    }
+  
+    .arrowSVG {
+      width: 150px;
+    }
+  
+    .stepImage {
+      width: 350px;
+    }
+
+
+  }
+  
+
+  @media screen and (max-width: 916px){
+    .stepTop {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+
+  @media screen and (min-width: 901px) and (max-width: 1451px){
+    .card{
+      min-width: 450px !important; /* Ajuster la largeur de vos cartes */
+    }
+  }
+
+
+
+  /* Ajustements du bg entre 3 et 4 */
+
+
+
+
+  @media screen and (max-width: 1200px){
+    .stepsPart3 {
+      padding: 100px 0 0 0!important;
+    }
+
+    .faq {
+     margin-top: 200px!important;
+    }
+  }
+  @media screen and (min-width: 801px) and (max-width: 1200px){
+    .arrowStep2Step3 {
+      left: 50%!important;
+    top: 85%!important;
+    }
+  }
+  @media screen and (max-width: 650px){
+    .stepsPart3 {
+      padding: 50px 0 0 0!important;
+    }
+    .arrowStep3Step4 {
+      top: 67%!important;
+    left: 40%!important;
+    }
+    .faq {
+     margin-top: 75px!important;
+    }
+  }
+  @media screen and (max-width: 600px){
+    .stepsPart3 {
+      padding: 0px 0 0 0!important;
+    }
+    .step03 {
+      padding: 200px 0 100px 0!important;
+    }
+    .faq {
+     margin-top: 100px!important;
+    }
+    .arrowStep2Step3 {
+      left: 50%!important;
+    top: 70%!important;
+    }
+    .arrowStep3Step4 {
+      top: 65%!important;
+    left: 40%!important;
+    }
+  }
+  @media screen and (max-width: 450px){
+    .arrowStep2Step3 {
+      left: 50%!important;
+    top: 75%!important;
+    }
+    .arrowStep3Step4 {
+      top: 66%!important;
+    left: 40%!important;
+    }
+  }
+
+  @media screen and (max-width: 400px){
+    .arrowStep2Step3 {
+      left: 50%!important;
+    top: 80%!important;
+    }
+    .arrowStep3Step4 {
+      top: 67%!important;
+    left: 40%!important;
+    }
+  }
+/* Ajustements des positions absolute */
+
+
+
+
+
+  @media screen and (max-width: 1500px){
+    .parentHexaSVGWhite {
+      left: -15% !important;
+      bottom: -35% !important;
+    }
+    .HexaSVGWhite {
+      width: 500px !important;
+    }
+
+    .parentHexaSVGBlue {
+      right: -15% !important;
+      bottom: 40% !important;
+    }
+    .HexaSVGBlue {
+      width: 500px !important; 
+    }
+
+  }
+  @media screen and (max-width: 1000px){
+    .parentHexaSVGWhite {
+      left: -15% !important;
+      bottom: -40% !important;
+    }
+    .HexaSVGWhite {
+      width: 400px !important;
+    }
+
+    .parentHexaSVGBlue {
+      right: -15% !important;
+      bottom: 40% !important;
+    }
+    .HexaSVGBlue {
+      width: 400px !important; 
+    }
+  }
+  @media screen and (max-width: 600px){
+    .parentHexaSVGWhite {
+      left: -15% !important;
+      bottom: -20% !important;
+    }
+    .HexaSVGWhite {
+      width: 300px !important;
+    }
+
+    .parentHexaSVGBlue {
+      right: -15% !important;
+      bottom: 75% !important;
+    }
+    .HexaSVGBlue {
+      width: 200px !important; 
+    }
+  }
+
+
+
+  /* Ajustements des faq */
+
+
+  @media screen and (max-width: 1500px){
+
+  .faqWrapper .carousel {
+    gap: 40px !important;
+  }
+  .faqCarousel .card {
+    width: 100%!important;
+  }
+  .faqText {
+    font-size: 2.5rem!important;
+  }
+}
+
+@media screen and (max-width: 1000px){
+
+  .faq {
+    flex-direction: column;
+    gap: 50px;
+    padding: 100px 0px 250px 0px!important;
+  }
+  .part1TextFaq {
+   text-align: center!important;
+  }
+  .faqWrapper .carousel {
+    gap: 40px !important;
+  }
+  .faqCarousel .card {
+    width: 100%!important;
+  }
+  .faqText {
+    font-size: 2.5rem!important;
+  }
+}
+
+@media screen and (max-width: 650px){
+
+
+  .faqCarousel .col {
+    padding: 20px 20px 40px 30px !important;
+    min-width: 400px!important;
+  }
+
+  .faq .card .cardNumber {
+    font-size: 4rem!important;
+  }
+  .faq .card .cardTitle{
+    font-size: 1.6rem!important;
+  }
+  .faq .card .cardText{
+    font-size: 1.2rem!important;
+  }
+  .faq {
+    padding: 100px 0px 150px 0px !important;
+  }
+}
+@media screen and (max-width: 550px){
+
+
+  .faqCarousel .col {
+    padding: 20px 20px 40px 30px !important;
+    min-width: 300px!important;
+  }
+
+  .faq .card .cardNumber {
+    font-size: 4rem!important;
+  }
+  .faq .card .cardTitle{
+    font-size: 1.4rem!important;
+  }
+  .faq .card .cardText{
+    font-size: 1.1rem!important;
+  }
+  .faqText {
+    font-size: 2rem!important;
+  }
+}
+@media screen and (max-width: 450px){
+
+
+  .faqCarousel .col {
+    padding: 20px 20px 40px 30px !important;
+    min-width: 250px!important;
+  }
+
+  .faq .card .cardNumber {
+    font-size: 3rem!important;
+  }
+  .faq .card .cardTitle{
+    font-size: 1.2rem!important;
+  }
+  .faq .card .cardText{
+    font-size: 0.9rem!important;
+  }
+  .faqText {
+    font-size: 1.7rem!important;
+  }
+}

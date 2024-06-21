@@ -1,0 +1,10 @@
+/* Increase font size for the admin panel */
+body, .card, .card-body, .table, .form-control, .navbar, .sidebar {
+    font-size: 20px !important; /* Adjust this value as needed */
+}
+a  {
+    font-size: 18px !important; /* Adjust this value as needed */
+}
+.navbar-brand, .sidebar .nav-link, .form-label {
+    font-size: 18px; /* Adjust this value as needed */
+}

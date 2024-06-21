@@ -1,0 +1,204 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block extrahead %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+.dashboard-container {
+    padding: 20px;
+}
+
+.dashboard-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.dashboard-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 22%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+.dashboard-card h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.dashboard-card p {
+    margin: 0;
+    font-size: 24px;
+    color: #555;
+}
+
+.chart-container {
+    width: 100%;
+    margin: 0 auto 30px auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <h1>Admin Dashboard</h1>
+
+    <div class="dashboard-cards">
+        <div class="dashboard-card">
+            <h2>Total Users</h2>
+            <p>{{ user_count }}</p>
+        </div>
+        <div class="dashboard-card">
+            <h2>Voyageurs</h2>
+            <p>{{ voyageur_count }}</p>
+        </div>
+        <div class="dashboard-card">
+            <h2>Non-Voyageurs</h2>
+            <p>{{ non_voyageur_count }}</p>
+        </div>
+        <div class="dashboard-card">
+            <h2>Total Annonces</h2>
+            <p>{{ annonce_count }}</p>
+        </div>
+        <div class="dashboard-card">
+            <h2>Completed Annonces</h2>
+            <p>{{ annonces_completed }}</p>
+        </div>
+        <div class="dashboard-card">
+            <h2>Pending Annonces</h2>
+            <p>{{ annonces_pending }}</p>
+        </div>
+        <div class="dashboard-card">
+            <h2>Total Demande Annonces</h2>
+            <p>{{ demande_annonce_count }}</p>
+        </div>
+        <div class="dashboard-card">
+            <h2>Total Demande Compte Voyageurs</h2>
+            <p>{{ demande_compte_voyageur_count }}</p>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <div class="chart-title">User Trends (Last 6 Months)</div>
+        <canvas id="userTrendsChart" width="400" height="200"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <div class="chart-title">Annonce Trends (Last 6 Months)</div>
+        <canvas id="annonceTrendsChart" width="400" height="200"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <div class="chart-title">User Types</div>
+        <canvas id="userChart" width="400" height="200"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <div class="chart-title">Annonce Status</div>
+        <canvas id="annonceChart" width="400" height="200"></canvas>
+    </div>
+</div>
+
+<script>
+var userCtx = document.getElementById('userChart').getContext('2d');
+var userData = {
+    labels: ['Voyageurs', 'Non-Voyageurs'],
+    datasets: [{
+        label: 'User Types',
+        backgroundColor: ['rgb(54, 162, 235)', 'rgb(255, 206, 86)'],
+        borderColor: 'rgb(54, 162, 235)',
+        data: [{{ voyageur_count }}, {{ non_voyageur_count }}],
+    }]
+};
+var userConfig = {
+    type: 'doughnut',
+    data: userData,
+    options: {}
+};
+var userChart = new Chart(userCtx, userConfig);
+
+var annonceCtx = document.getElementById('annonceChart').getContext('2d');
+var annonceData = {
+    labels: ['Completed', 'Pending'],
+    datasets: [{
+        label: 'Annonce Status',
+        backgroundColor: ['rgb(75, 192, 192)', 'rgb(255, 159, 64)'],
+        borderColor: 'rgb(75, 192, 192)',
+        data: [{{ annonces_completed }}, {{ annonces_pending }}],
+    }]
+};
+var annonceConfig = {
+    type: 'pie',
+    data: annonceData,
+    options: {}
+};
+var annonceChart = new Chart(annonceCtx, annonceConfig);
+
+var userTrendsCtx = document.getElementById('userTrendsChart').getContext('2d');
+var userTrendsData = {
+    labels: {{ month_labels|safe }},
+    datasets: [{
+        label: 'New Users',
+        backgroundColor: 'rgb(54, 162, 235)',
+        borderColor: 'rgb(54, 162, 235)',
+        data: {{ user_trends|safe }},
+        fill: false,
+    }]
+};
+var userTrendsConfig = {
+    type: 'line',
+    data: userTrendsData,
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+};
+var userTrendsChart = new Chart(userTrendsCtx, userTrendsConfig);
+
+var annonceTrendsCtx = document.getElementById('annonceTrendsChart').getContext('2d');
+var annonceTrendsData = {
+    labels: {{ month_labels|safe }},
+    datasets: [{
+        label: 'New Annonces',
+        backgroundColor: 'rgb(255, 159, 64)',
+        borderColor: 'rgb(255, 159, 64)',
+        data: {{ annonce_trends|safe }},
+        fill: false,
+    }]
+};
+var annonceTrendsConfig = {
+    type: 'line',
+    data: annonceTrendsData,
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+};
+var annonceTrendsChart = new Chart(annonceTrendsCtx, annonceTrendsConfig);
+</script>
+
+{% endblock %}
